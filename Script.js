@@ -19,6 +19,11 @@ var evalStringArray=[];
 
 var calcNumBtns=document.getElementsByClassName("calc-btn-num");
 var calcOperatorBtns=document.getElementsByClassName("calc-btn-operator");
+var plusBtn=document.getElementById("calc-plus");
+
+var calEqualBtn= document.getElementById("calc-equal");
+
+
 
 var updateDisplayVal=(clickObj)=>{
     var btnText=clickObj.target.innerText;
@@ -29,8 +34,8 @@ var updateDisplayVal=(clickObj)=>{
     displayVal+=btnText;
     displayValElement.innerText=displayVal;
 }
-var performOperation =(click)=>{
-    var operator =clickObj.target.innerText;
+var performOperation =(x)=>{
+    var operator =x.target.innerText;
     switch (operator){
         case "+":
             pendingVal=displayVal;
